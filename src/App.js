@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import {
+  FaApple,
+  FaAtlassian,
+  FaArtstation,
+  FaTwitter,
+  FaTypo3,
+} from "react-icons/fa";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen h-screen flex justify-center items-center">
+      <div className="card">
+        <ReactIcon icon={<FaApple />} />
+        <ReactIcon icon={<FaAtlassian />} />
+        <ReactIcon icon={<FaArtstation />} />
+        <ReactIcon icon={<FaTwitter />} />
+        <ReactIcon icon={<FaTypo3 />} />
+      </div>
     </div>
   );
 }
+
+const ReactIcon = ({ icon }) => <div className="iconContainer">{icon}</div>;
 
 export default App;
